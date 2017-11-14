@@ -55,11 +55,13 @@ def organize_schools(schools)
   #get uniq list of locations
   places = []
   places = schools.values.collect do |location|
-    location[:location] = []
+    location[:location]
   end
 
   #get rid of duplicates
-  places = places.uniq
+  places = places.uniq.collect do |city|
+    city = {city => []}
+  end
 
   schools.each do |school, location|
     location[:location]
