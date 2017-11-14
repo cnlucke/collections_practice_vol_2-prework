@@ -28,19 +28,12 @@ def organize_schools(schools)
  end
 
  #get rid of duplicates, add each item in array to hash
- places.uniq.each do |city|
+ places.uniq.collect do |city|
    places_by_hash.merge!( {city => []} )
  end
 
-places = ["NYC", "SF", "Chicago"]
-= {"NYC"=> [], "SF"=> []}
-city = "NYC"
-
-entries = {city => []}
-entries["NYC"] << "placwe 2"
-
  schools.each do |school, city|
-   city[:location] #"NYC"
+   places_by_hash[city[:location]] << school
  end
 
 end
