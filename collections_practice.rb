@@ -52,5 +52,17 @@ end
 
 #organize_schools organizes the schools by location
 def organize_schools(schools)
+  #get uniq list of locations
+  places = []
+  places = schools.values.collect do |location|
+    location[:location] = []
+  end
+
+  #get rid of duplicates
+  places = places.uniq
+  
+  schools.each do |school, location|
+    location[:location]
+  end
 
 end
