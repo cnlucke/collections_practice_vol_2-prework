@@ -55,7 +55,7 @@ def organize_schools(schools)
   #get uniq list of locations
   places = []
   places = schools.values.collect do |location|
-    location[:location] => []
+    location[:location] = []
   end
 
   #get rid of duplicates
