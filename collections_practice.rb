@@ -52,28 +52,21 @@ end
 
 #organize_schools organizes the schools by location
 def organize_schools(schools)
-  #get uniq list of locations
-  places = []
-  places_by_hash = {}
+ #get uniq list of locations
+ places = []
+ places_by_hash = {}
 
-  places = schools.values.collect do |location|
-    location[:location]
-  end
+ places = schools.values.collect do |location|
+   location[:location]
+ end
 
-  #get rid of duplicates, add each item in array to hash
-  places.uniq.each do |city|
-    places_by_hash.merge!( {city => []} )
-  end
+ #get rid of duplicates, add each item in array to hash
+ places.uniq.collect do |city|
+   places_by_hash.merge!( {city => []} )
+ end
 
-places = ["NYC", "SF", "Chicago"]
- = {"NYC"=> [], "SF"=> []}
-city = "NYC"
-
-entries = {city => []}
-entries["NYC"] << "placwe 2"
-
-  schools.each do |school, city|
-    city[:location] #"NYC"
-  end
+ schools.each do |school, city|
+   places_by_hash[city[:location]] << school
+ end
 
 end
