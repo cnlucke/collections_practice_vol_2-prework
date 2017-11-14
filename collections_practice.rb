@@ -60,7 +60,7 @@ def organize_schools(schools)
 
   #get rid of duplicates
   places = places.uniq.collect do |city|
-    places[city] => []
+    places[city] = []
   end
 
   schools.each do |school, location|
