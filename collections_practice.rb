@@ -62,7 +62,7 @@ def organize_schools(schools)
 
   #get rid of duplicates
   places_by_hash = places.uniq.collect do |city|
-    places_by_hash = {city = []}
+    places_by_hash = {city => []}
   end
 
 places = ["NYC", "SF", "Chicago"]
