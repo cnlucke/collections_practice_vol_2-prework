@@ -54,17 +54,26 @@ end
 def organize_schools(schools)
   #get uniq list of locations
   places = []
+  places_by_hash = {}
+
   places = schools.values.collect do |location|
     location[:location]
   end
 
   #get rid of duplicates
-  places = places.uniq.collect do |city|
-    city => []
+  places_by_hash = places.uniq.collect do |city|
+    places_by_hash = {city = []}
   end
 
-  schools.each do |school, location|
-    location[:location]
+places = ["NYC", "SF", "Chicago"]
+ = {"NYC"=> [], "SF"=> []}
+city = "NYC"
+
+entries = {city => []}
+entries["NYC"] << "placwe 2"
+
+  schools.each do |school, city|
+    city[:location] #"NYC"
   end
 
 end
