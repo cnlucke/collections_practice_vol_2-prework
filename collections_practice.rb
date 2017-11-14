@@ -60,7 +60,7 @@ def organize_schools(schools)
     location[:location]
   end
 
-  #get rid of duplicates
+  #get rid of duplicates, add each item in array to hash
   places.uniq.each do |city|
     places_by_hash.merge!( {city => []} )
   end
