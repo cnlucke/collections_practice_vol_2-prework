@@ -47,9 +47,7 @@ end
 
 #find_cool find all cool hashes
 def find_cool(hashes)
-  hashes.collect do |hash|
-    hash.has_value?("cool")
-  end
+  hashes.select { |hash| hash.has_value?("cool") }
 end
 
 #organize_schools organizes the schools by location
