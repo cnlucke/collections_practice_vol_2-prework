@@ -1,4 +1,22 @@
-require "pp"
+schools = {
+  "flatiron school bk" => {:location => "NYC"},
+    
+  "flatiron school" => {:location => "NYC"},
+
+  "dev boot camp" => {:location => "SF"},
+
+  "dev boot camp chicago" => {:location => "Chicago"},
+
+  "general assembly" => {:location => "NYC"},
+  
+  "Hack Reactor" => {:location => "SF"}
+}
+
+organized_schools =     
+    {"NYC"=>["flatiron school bk", "flatiron school", "general assembly"],
+     "SF"=>["dev boot camp", "Hack Reactor"],
+     "Chicago"=>["dev boot camp chicago"]}
+
 
 A = [
        {
